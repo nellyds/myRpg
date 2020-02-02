@@ -9,12 +9,12 @@
 </template>
 
 <style>
+
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Final Fantasy Script Collection - Final Fantasy VII", Helvetica, Arial, sans-serif;
+
   text-align: center;
-  color: #2c3e50;
+
 }
 
 #nav {
@@ -23,7 +23,7 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+
 }
 
 #nav a.router-link-exact-active {

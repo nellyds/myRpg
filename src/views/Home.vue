@@ -14,10 +14,10 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style >
     body{
         color: white;
-        font-family: 'reactor';
-        background-color: black;
+        font-family: 'Pixel Cyr Normal';
+
     }
 </style>

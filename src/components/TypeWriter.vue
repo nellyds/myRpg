@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div class="alphaContainer">
+    <div class="container alphaContainer">
     <p>output: {{output}}</p>
         <div class="alphaRow">
             <span class="letterHolder"><span class="selectedLetter" id="a">a</span></span>
@@ -44,6 +44,7 @@
             <span class="letterHolder"><span id=" ">' '</span></span>
             <span class="letterHolder"><span id="@">@</span></span>
         </div>
+
     </div>
 
   <button v-on:click="indexUp">index +</button>
@@ -51,6 +52,7 @@
     <button v-on:click="rowUp"> row + </button>
     <button v-on:click="rowDown"> row -</button>
     <button v-on:click="add"> add</button>
+    <button v-on:click="move"> move</button>
       </div>
 
       
@@ -72,7 +74,13 @@ export default {
     ['z','.','?',' ','@']
     ] 
     }
-  },methods:{
+  },
+  mounted: {
+    
+
+	},
+  
+  methods:{
         indexUp: function(){
             if (this.targetIndex <4){
                 document.getElementById(this.abc[this.targetRow][this.targetIndex]).classList.remove("selectedLetter");
@@ -103,27 +111,69 @@ export default {
     },
     add: function(){
         this.output += this.abc[this.targetRow][this.targetIndex];
-    }
-  }
+    },
+    move: function(){
+        document.getElementById("squareMove").classList.remove("square");
+    },
+    
 
-}
+}}
 </script>
-<style scoped>
+<style>
     .alphaContainer{
         margin: auto;
+        width: 35%;
     }
     .alphaRow{
         margin: auto;
         font-size: 1.2em;
-        width: 40em;
-        padding: 5px;
+        width: 100%;
+        padding-bottom: .5em;
     }
-    .selectedLetter{
-        padding: 2px;
-        border: 2px solid black;
-    }
+
     .letterHolder{
-        padding: 5px;
+        padding: .5em;
     }
+    body{
+        color: white;
+        font-family: 'Pixel Cyr Normal';
+
+    }
+
+    .selectedLetter{
+  border-bottom: .1em solid white;
+
+}
+
+.default {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+
 
 </style>
