@@ -2,8 +2,6 @@
 <div>
 <div></div>
 <img :src="image" />
-      <p> {{alive}} </p>
-      <p> Current: {{hitPoints}} </p>
       </div>
 
 </template>
@@ -32,7 +30,7 @@ export default {
 </script>
 <style scoped>
 img{
-    width: 10%;
+    width: 5;
     height: auto;;
 }
 </style>

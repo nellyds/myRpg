@@ -115,6 +115,7 @@ export default {
     move: function(){
         document.getElementById("squareMove").classList.remove("square");
     },
+
     
 
 }}

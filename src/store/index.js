@@ -15,13 +15,20 @@ export default new Vuex.Store({
     ],
     hitPoints: 20,
     playerAtk: 3,
+    defense: 1,
+    name: '',
+    class: '',
 
   },
   mutations: {
-    change(state) {
-
-      state.hitPoints = state.hitPoints -1;
-  }},
+    attacked(state, defenseMultiple) {
+      console.log(defenseMultiple);
+      state.hitPoints = state.hitPoints - (defenseMultiple-1+1)
+  },
+  name(state, name) {
+    state.name = name;
+  } 
+},
   actions: {},
   modules: {}
 });
